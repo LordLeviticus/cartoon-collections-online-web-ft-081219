@@ -18,16 +18,14 @@ end
 
 
 
-def long_planeteer_calls?(calls_array)
-  longer_than_four = false 
-  calls_array.each do |word|
-    if word.length > 4 
-      return true  
-    else
-      longer_than_four = false 
-    end
+def long_planeteer_calls?(array)
+  i = 0 
+  if array.any? {|word| word.length > 4}
+    return true 
+  else
+    return false 
+  i += 1 
   end
-  return longer_than_four
 end
 
 def find_the_cheese# code an argument here
